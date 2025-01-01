@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cloudflare Workers SaaS
 
-## Getting Started
+This is a SaaS template for Cloudflare Workers. It uses the [OpenNext](https://opennextjs.com/) framework to build a SaaS application.
 
-First, run the development server:
+It is based on https://github.com/flarelabs-net/workers-next
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Supported Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ Authentication with NextAuth
+- ✅ Database with Drizzle and Cloudflare D1
+- ✅ Deployment with Github Actions
+- ✅ Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Planned features (TODO):
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] Billing
+- [ ] Admin dashboard
+- [ ] Email
+- [ ] Notifications
+- [ ] Payments
+- [ ] Webhooks
 
-## Learn More
+## Running it locally
 
-To learn more about Next.js, take a look at the following resources:
+1. `pnpm install`
+2. `pnpm db:migrate:dev` - Creates a local SQLite database and applies migrations
+3. Update the documentation in `./cursor-docs` so that Cursor AI can understand the project
+4. `pnpm dev`
+5. Open http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploying to Cloudflare with Github Actions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+TODO

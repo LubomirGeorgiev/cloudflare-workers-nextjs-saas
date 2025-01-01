@@ -7,3 +7,12 @@ compatibility_flags = ["nodejs_compat"]
 
 # Assets used for files and cache priming.
 assets = { directory = ".open-next/assets", binding = "ASSETS" }
+
+[placement]
+mode = "smart"
+
+[[d1_databases]]
+binding = "DATABASE"
+database_name = "cloudflare-workers-nextjs-saas"
+database_id = "373e8c81df0b470b9cd555cc56de3f21"
+migrations_dir = "src/db/migrations"
