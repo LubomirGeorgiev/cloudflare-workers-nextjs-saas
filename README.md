@@ -23,10 +23,11 @@ Planned features (TODO):
 ## Running it locally
 
 1. `pnpm install`
-2. `pnpm db:migrate:dev` - Creates a local SQLite database and applies migrations
-3. Update the documentation in `./cursor-docs` so that Cursor AI can understand the project
-4. `pnpm dev`
-5. Open http://localhost:3000
+2. Copy `.env.example` to `.env` and fill in the values
+3. `pnpm db:migrate:dev` - Creates a local SQLite database and applies migrations
+4. Update the documentation in `./cursor-docs` with your project details so that Cursor AI can give you better suggestions
+5. `pnpm dev`
+6. Open http://localhost:3000
 
 ## Deploying to Cloudflare with Github Actions
 

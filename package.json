@@ -14,8 +14,12 @@
     "db:migrate:dev": "wrangler d1 migrations apply cloudflare-workers-nextjs-saas --local"
   },
   "dependencies": {
+    "@oslojs/crypto": "^1.0.1",
+    "@oslojs/encoding": "^1.1.0",
     "@paralleldrive/cuid2": "^2.2.2",
+    "arctic": "^2.3.3",
     "drizzle-orm": "^0.38.3",
+    "enhanced-ms": "^3.0.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",

@@ -1,4 +1,4 @@
-async function hashPassword(password: string, providedSalt?: Uint8Array): Promise<string> {
+async function hashPassword(password: string, providedSalt?: Uint8Array) {
   const encoder = new TextEncoder();
   const salt = providedSalt || crypto.getRandomValues(new Uint8Array(16));
 
@@ -36,7 +36,7 @@ async function hashPassword(password: string, providedSalt?: Uint8Array): Promis
   return `${saltHex}:${hashHex}`;
 }
 
-async function verifyPassword(storedHash: string, passwordAttempt: string): Promise<boolean> {
+async function verifyPassword(storedHash: string, passwordAttempt: string) {
   const [saltHex, originalHash] = storedHash.split(":");
   const salt = new Uint8Array(saltHex.match(/.{1,2}/g)!.map((byte: string) => parseInt(byte, 16)));
 

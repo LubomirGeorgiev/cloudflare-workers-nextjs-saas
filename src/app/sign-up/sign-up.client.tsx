@@ -1,6 +1,6 @@
 'use client'
 
-import { signUpAction } from '@/actions'
+import { signInAction, signUpAction } from '@/actions'
 
 const SignUpClientComponent = () => {
   return (
@@ -14,6 +14,13 @@ const SignUpClientComponent = () => {
     })}>
       Sign Up
     </button>
+
+      <button onClick={() => signInAction({
+        email: 'john.doe@example.com',
+        password: 'password',
+      })}>
+        Sign In
+      </button>
     </div>
   )
 };

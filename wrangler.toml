@@ -14,5 +14,9 @@ mode = "smart"
 [[d1_databases]]
 binding = "DATABASE"
 database_name = "cloudflare-workers-nextjs-saas"
-database_id = "373e8c81df0b470b9cd555cc56de3f21"
+database_id = "0d36e6e4-58a7-4c30-a090-f116d6bc4a3d"
 migrations_dir = "src/db/migrations"
+
+[[kv_namespaces]]
+binding = "NEXT_CACHE_WORKERS_KV"
+id = "f5c002f17bc9406bb24a9adc9f451fd9"

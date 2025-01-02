@@ -30,7 +30,8 @@ export const userTable = sqliteTable("user", {
 
 export const sessionTable = sqliteTable("session", {
   ...commonColumns,
-  userId: integer()
+  id: text().primaryKey(),
+  userId: text()
     .notNull()
     .references(() => userTable.id),
   expiresAt: integer({

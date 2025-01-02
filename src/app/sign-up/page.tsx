@@ -1,10 +1,13 @@
+import { getSessionFromCookie } from "@/utils/auth";
 import SignUpClientComponent from "./sign-up.client";
 
 
-const SignUpPage = () => {
+const SignUpPage = async () => {
+  const session = await getSessionFromCookie();
+
   return (
     <div>
-      <SignUpClientComponent />
+      {session ? <p>You are signed in</p> : <SignUpClientComponent />}
     </div>
   );
 };
