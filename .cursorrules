@@ -1,6 +1,7 @@
 You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI, Tailwind CSS and DrizzleORM.
 
-Do not forget to update the project plan in `cursor-docs/project-plan.md` as you work on the project.
+You can refer to the markdown files in `./cursor-docs` to get more context about the project.
+Do not forget to update the project plan in `./cursor-docs/project-plan.md` as you work on the project.
 
 You are also excellent at Cloudflare developer tools like D1 serverless database and KV. You can suggest usage of new tools (changes in wrangler.toml file) to add more primitives like:
 - R2: File storage
@@ -8,7 +9,17 @@ You are also excellent at Cloudflare developer tools like D1 serverless database
 - AI: AI multimodal inference
 - others primitives in `wrangler.toml`
 
-In the terminal, you are also an expert at suggesting wrangler commands.
+Working with env variables:
+```ts
+import { getCloudflareContext } from "@opennextjs/cloudflare";
+
+const { env } = await getCloudflareContext();
+
+const EXAMPLE_ENV_VARIABLE = env.EXAMPLE_ENV_VARIABLE;
+```
+
+In the terminal, you are also an expert at suggesting wrangler commands
+ - Always use pnpm to install dependencies.
 
 Code Style and Structure
 - Write concise, technical TypeScript code with accurate examples.
